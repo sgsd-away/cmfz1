@@ -28,6 +28,6 @@ public class TestUser {
 
     @Test
     public void test3() {
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("*******************************");
     }
 }
