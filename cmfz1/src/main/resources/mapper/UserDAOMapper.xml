@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!-- 
+	namespace: 指定当前mapper.xml管理的接口 全限定名
+	注意：一个mapper.xml只能管理一个接口
+-->
+
+<mapper namespace="com.baizhi.dao.UserDAO">
+    <select id="selectOneWeekBoy" resultType="Integer">
+        select count(*)
+        from user
+        where datediff(now(), create_date) between 0 and 7
+          and sex = '男'
+    </select>
+    <select id="selectOneWeekGirl" resultType="Integer">
+        select count(*)
+        from user
+        where datediff(now(), create_date) between 0 and 7
+          and sex = '女'
+    </select>
+    <select id="selectTwoWeekBoy" resultType="Integer">
+        select count(*)
+        from user
+        where datediff(now(), create_date) between 8 and 14
+          and sex = '男'
+    </select>
+    <select id="selectTwoWeekGirl" resultType="Integer">
+        select count(*)
+        from user
+        where datediff(now(), create_date) between 8 and 14
+          and sex = '女'
+    </select>
+    <select id="selectThreeWeekBoy" resultType="Integer">
+        select count(*)
+        from user
+        where datediff(now(), create_date) between 15 and 21
+          and sex = '男'
+    </select>
+    <select id="selectThreeWeekGirl" resultType="Integer">
+        select count(*)
+        from user
+        where datediff(now(), create_date) between 15 and 21
+          and sex = '女'
+    </select>
+</mapper>
