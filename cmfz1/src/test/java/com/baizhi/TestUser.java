@@ -25,4 +25,9 @@ public class TestUser {
         GoEasy goEasy = new GoEasy("http://rest-hangzhou.goeasy.io", "BC-71377dac8fd940fca1ec0cacf672d73c");
         goEasy.publish("my_channel", "Hello, GoEasy!");
     }
+
+    @Test
+    public void test3() {
+
+    }
 }
